@@ -1,0 +1,169 @@
+/**
+ * skillbar
+ * -------------------------------------------------------------------
+ */
+.skill-bar li {
+  position: relative;
+  list-style: none;
+  margin: 40px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.skill-bar li:before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(55, 170, 156, 0.5);
+  border-radius: 1000px;
+}
+
+.skill-bar li:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 0;
+  height: 12px;
+  background-color: rgb(118, 196, 184);
+  border-radius: 1000px;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.skill-bar li.python.show:after {
+  animation-name: python;
+}
+
+@keyframes python {
+  to {
+    width: 90%;
+  }
+}
+.skill-bar li.c.show:after {
+  animation-name: c;
+}
+
+@keyframes c {
+  to {
+    width: 80%;
+  }
+}
+.skill-bar li.ms.show:after {
+  animation-name: ms;
+}
+
+@keyframes ms {
+  to {
+    width: 75%;
+  }
+}
+.skill-bar li.ng.show:after {
+  animation-name: ng;
+}
+
+@keyframes ng {
+  to {
+    width: 60%;
+  }
+}
+.s-about__content-bottom a:hover,
+.s-about__content-bottom a:focus {
+  color: white;
+}
+
+.s-about__content-bottom .btn--download {
+  background-color: white;
+  border-color: white;
+  color: black;
+  margin-right: 50;
+}
+
+.s-about__content-bottom .btn--download svg {
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+  margin-right: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.s-about__content-bottom .btn--download:hover,
+.s-about__content-bottom .btn--download:focus {
+  background-color: var(--color-2);
+  border-color: var(--color-2);
+}
+
+.s-about__content-bottom .btn--download:hover svg path,
+.s-about__content-bottom .btn--download:focus svg path {
+  fill: white;
+}
+
+@media screen and (max-width: 600px) {
+  .s-about__content-bottom .btn--download {
+    margin-top: var(--vspace-0_5);
+    width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .s-about__content-bottom .btn--download svg {
+    display: none;
+  }
+}
+.see-more li {
+  position: relative;
+  list-style: none;
+  margin: 40px 0;
+  font-weight: 500;
+  text-align: center;
+}
+.see-more li a {
+  color: rgb(206, 206, 206);
+}
+.see-more li a:hover {
+  color: coral;
+}
+
+.s-hero__content-social a:hover,
+.s-hero__content-social a:focus {
+  color: var(--color-2-light);
+}
+.s-hero__content-social a:hover .fa-facebook-f,
+.s-hero__content-social a:focus .fa-facebook-f {
+  color: var(--color-1-dark);
+}
+.s-hero__content-social a:hover .fa-line,
+.s-hero__content-social a:focus .fa-line {
+  color: rgb(116, 199, 116);
+}
+.s-hero__content-social a:hover .fa-linkedin-in,
+.s-hero__content-social a:focus .fa-linkedin-in {
+  color: #0072b1;
+}
+.s-hero__content-social a:hover .fa-whatsapp,
+.s-hero__content-social a:focus .fa-whatsapp {
+  color: #25D366;
+}
+
+.info li {
+  position: relative;
+  list-style: none;
+  margin-top: 5px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.info li p {
+  margin-top: 5px;
+  padding-left: 10%;
+  color: antiquewhite;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+#skills-section {
+  scroll-padding-top: 500px;
+  padding-top: 200;
+}/*# sourceMappingURL=override.css.map */
